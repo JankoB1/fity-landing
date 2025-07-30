@@ -1,0 +1,407 @@
+@import './assets/fonts/fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'TT Norms Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hero {
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background: linear-gradient(290.72deg, rgba(157, 208, 48, 0.5) 0.98%, rgba(157, 208, 48, 0.2) 81.51%);
+
+}
+
+.hero-logo {
+  padding-bottom: 60px;
+}
+
+.hero-button {
+  background-color: #19B888;
+  padding: 14px 20px;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+
+.lh-cus {
+    line-height: 100%;
+}
+
+p strong {
+    font-weight: 500 !important;
+}
+
+li::before {
+  content: url(./assets/icons/check-icon.svg);
+  padding-right: 20px;
+  align-items: center;
+  position: relative;
+  top: 5px;
+}
+
+.benefits {
+  background-image: url("./assets/images/DSC_6954 1@2x.png");
+    background-size: cover;
+    padding: 120px 100px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.color-fity-green {
+    color: #19B888;
+}
+
+.li-benefits, .aplication-funcionality {
+    width: 48%;
+}
+
+.li-benefits h5 {
+    color: white;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.li-benefits p {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.fity-features h6 {
+    color: #173430;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.fity-features p {
+    color: #173430;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 126%;
+}
+
+footer {
+    background-color: #F2F2F2;
+    padding: 50px 0px;
+}
+
+footer p {
+    color: #617D79;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.about-fity {
+    padding: 130px 0px;
+}
+
+.aplication {
+    background-color: #F2F2F2;
+    padding: 120px 100px;
+}
+
+.color-natural {
+    color: #173430;
+}
+
+.aplication-funcionality h5 {
+    color: #173430;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.aplication-funcionality p {
+    color: #173430;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.green-numbers {
+    width: 50px;
+    background-color: #19B888;
+    border-radius: 15px;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    justify-self: center;
+    margin-bottom: 20px;
+}
+
+.manifesto {
+    background-image: url("./assets/images/Nenaslovljeni dizajn 2.png");
+    background-size: cover;
+    padding: 200px 0;
+}
+
+.launch {
+    padding-top: 210px;
+}
+
+.launch-central {
+    padding-bottom: 80px;
+    margin-bottom: 60px;
+}
+
+.pricing-plan p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.pricing-plan h5 {
+    font-size: 24px;
+    color: #19B888;
+    font-weight: 500;
+    text-align: center;
+}
+
+.pricing-plan span {
+    color: #617D79;
+    font-size: 14px;
+}
+
+.pricing-plan div {
+    background-color: #9DD03033;
+    border: 1px solid #19B888;
+    border-radius: 25px;
+    padding: 22px 75px;
+    width: 350px;
+}
+
+.waiting-list {
+    padding-top: 90px;
+    padding-left: 7.5%;
+}
+
+.launch-row {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.reservation-box {
+    background: #F2F2F2;
+    border-radius: 25px;
+    padding: 40px 35px;
+}
+
+.reservation-box h5 {
+    font-family: TT Norms Pro;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    vertical-align: middle;
+    color: #19B888;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.num-bold {
+    font-family: TT Norms Pro;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 39px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    color: #173430;
+}
+
+.num-light {
+    font-family: TT Norms Pro;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 25px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    color: #173430;
+}
+
+.num-resto {
+    font-family: TT Norms Pro;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: -1%;
+    text-align: right;
+    color: #19B888;
+}
+
+.numbers-line {
+    position: relative;
+}
+
+.numbers-line, .line-inner {
+    width: 100%;
+    height: 14px;
+    border-radius: 50px;
+    background: #d9d9d9;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.line-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: radial-gradient(148.52% 334.98% at 96.67% 50%, #4FC264 0%, #19B888 42.71%, #19B888 100%);
+    width: 50%;
+    margin: 0;
+}
+
+.lis-box > p {
+    font-family: TT Norms Pro;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    vertical-align: middle;
+    color: #173430;
+    margin-bottom: 15px;
+}
+
+.lis-box > span {
+    font-family: TT Norms Pro;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    vertical-align: middle;
+    color: #173430;
+    text-align: center;
+    display: flex;
+    column-gap: 10px;
+    padding-left: 50px;
+}
+
+.timer-number {
+    border: 1px solid #17343033;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 43px;
+    border-radius: 15px;
+    font-family: TT Norms Pro;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 32px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    color: #173430;
+}
+
+.timer-text {
+    font-family: TT Norms Pro;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 13px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    vertical-align: middle;
+    color: #173430;
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.timer-dots {
+    background: transparent;
+    border-color: transparent;
+    color: #19B888;
+    font-size: 40px;
+}
+
+.launch-down {
+    max-width: 1100px;
+    margin: 110px auto 0;
+    padding-top: 110px;
+    border-top: 1px solid #617D7933;
+}
+
+@media only screen and (max-width: 800px) {
+    .cup-hero {
+        display: none;
+    }
+
+    .hero, .benefits, .about-fity, .aplication, .waiting-list {
+        padding: 10% 5%;
+    }
+
+    .about-fity .hero-button {
+        max-width: unset;
+    }
+
+    .fity-features p {
+        font-size: 18px;
+    }
+
+    .li-benefits {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .manifesto {
+        padding: 50px 0;
+    }
+
+    .hero div {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+        line-height: 42px;
+        width: 100%;
+    }
+
+    .hero h3 {
+        font-size: 20px;
+    }
+
+    .hero li {
+        padding-top: 0px;
+    }
+
+    .hero-button {
+        max-width: 240px;
+    }
+
+    .hero-button p {
+        font-size: 14px;
+        padding-right: 10px;
+    }
+
+    .pricing-plan {
+        flex-wrap: wrap;
+    }
+}
