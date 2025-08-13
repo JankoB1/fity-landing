@@ -3,7 +3,8 @@ import orange from "../assets/images/Frame 26.png";
 import blue from "../assets/images/Frame 99.png";
 import green from "../assets/images/Frame 100.png";
 import apricot from "../assets/images/Frame 104.png";
-
+import purple from "../assets/images/auts.png";
+import pink from "../assets/images/pink.png";
 
 
 const About = () => {
@@ -12,10 +13,10 @@ const About = () => {
             <div className="pl-[10px] pr-[10px] w-1/1 md:w-3/5 items-center ml-auto mr-auto md:pl-[70px] md:pr-[70px]">
                 <h2 className="text-center text-[26px] md:text-[36px] font-bold mt-3 mb-8">Uštedi novac, vreme i energiju potrebnu za planiranje i praćenje obroka</h2>
                 <p className="text-[18px] md:text-[23px] text-center">Fity ti predlaže šta, koliko i kada da jedeš, u odnosu na tvoje ciljeve, preference i potrebe. Obroci su zdravi, ukusni i brzi. Za tebe generiše šoping listu namirnica i daje ti mogućnost da pratiš napredak. I još mnogo toga, za već <strong>od 575 RSD mesečno.</strong></p>
-                <div className="flex w-[400px] hero-button mt-10 justify-center mr-auto ml-auto">
+                <a href="#launch" className="flex w-[400px] hero-button mt-10 justify-center mr-auto ml-auto">
                     <p className="text-white pr-4 text-[18px] font-medium">Postani Fity Starter i ostvari benefite</p>
                     <img src={heart} alt="ring icon" />
-                </div>
+                </a>
             </div>
             <div className="block md:flex flex-wrap content-between mt-[50px] md:mt-[150px] fity-features">
                 <div className="w-1/1 md:w-1/2 mt-auto mb-auto pl-0 pr-0 md:pl-[100px] md:pr-[40px]">
@@ -43,7 +44,7 @@ const About = () => {
                         <p>Fity štedi tvoje vreme i na osnovu plana ishrane automatski generiše šoping listu, kategoriše namirnice prema vrsti ili obroku i olakšava ti njihovu nabavku.</p>
                     </div>
                     <div className="mt-[30px] md:mt-0 w-1/1 pl-0 orange-section md:w-1/2 md:pl-[40px]">
-                        <img src={orange} alt="orange section"/>
+                        <img src={purple} alt="orange section"/>
                     </div>
                 </div>
                 <div className="block md:flex flex-wrap content-between mt-[50px] md:mt-[150px] fity-features">
@@ -64,7 +65,7 @@ const About = () => {
                         <p>Na jednom mestu imaš sve alate za lako praćenje obroka, unetih kalorija i napretka. Fity te osnažuje da istraješ i ostaneš na putu stvaranja zdravih navika u ishrani.</p>
                     </div>
                     <div className="mt-[30px] md:mt-0 w-1/1 orange-section md:w-1/2 pl-0 md:pl-[40px]">
-                        <img src={orange} alt="orange section"/>
+                        <img src={pink} alt="orange section"/>
                     </div>
                 </div>
                 <div className="block md:flex flex-wrap content-between mt-[50px] md:mt-[150px] fity-features">

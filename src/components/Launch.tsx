@@ -6,7 +6,7 @@ import timer from '../assets/images/timer.svg';
 
 const Launch = () => {
     return (
-        <section className="relative">
+        <section className="relative" id="launch">
             <img src={plate1} alt="plate" className="w-1/5 absolute left-0 bottom-72" />
             <img src={plate2} alt="plate" className="w-1/5 absolute right-0 top-0" />
             <div className="launch w-full">
@@ -49,10 +49,10 @@ const Launch = () => {
                         <p className="flex gap-5"><img src={check} alt=""/>Rani pristup novim funkcionalnostima</p>
                         <p className="flex gap-5"><img src={check} alt=""/>Učešće u razvoju aplikacije i predlozima</p>
                         <p className="flex gap-5"><img src={check} alt=""/>Fity Starter poklon paket i bedž na profilu</p>
-                        <div className="flex w-[430px] hero-button mt-8 justify-center">
+                        <a href="#launch" className="flex w-[430px] hero-button mt-8 justify-center">
                             <p className="text-white pr-4 text-[18px] font-medium">Popuni upitnik i postani Fity Starter član</p>
                             <img src={message} alt="ring icon" />
-                        </div>
+                        </a>
                         <span>Upitnik ti neće oduzeti više od 60 sekundi <img src={timer} alt=""/></span>
                     </div>
                 </div>

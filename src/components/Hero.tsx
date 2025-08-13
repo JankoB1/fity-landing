@@ -19,10 +19,10 @@ const Hero = () => {
                     <li className="text-[16px] md:text-[20px] font-medium pb-2.5">Lako praćenje plana, kalorija i napretka</li>
                     <li className="text-[16px] md:text-[20px] font-medium pb-2.5">Sloboda izbora namirnica</li>
                 </ul>
-                <div className="flex w-[400px] hero-button mt-8 justify-center">
+                <a href="#launch" className="flex w-[400px] hero-button mt-8 justify-center">
                     <p className="text-white pr-4 text-[18px] font-medium">Postani Fity Starter i ostvari benefite</p>
                     <img src={heart} alt="heart icon" />
-                </div>
+                </a>
                 <div className="flex gap-2 items-center pb-32 pl-5">
                     <p className="text-base">Uskoro dostupno za <strong>android i IOS uređaje</strong></p>
                     <img src={apple} alt="apple" className="w-[50]"/>

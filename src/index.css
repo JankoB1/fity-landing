@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'TT Norms Pro', sans-serif;
@@ -17,7 +21,7 @@ code {
 }
 
 .hero {
-  padding-top: 50px;
+  padding-top: 100px;
   padding-left: 100px;
   padding-right: 100px;
   background: linear-gradient(290.72deg, rgba(157, 208, 48, 0.5) 0.98%, rgba(157, 208, 48, 0.2) 81.51%);
@@ -26,6 +30,15 @@ code {
 
 .hero-logo {
   padding-bottom: 60px;
+}
+
+.hero h1, .hero h3, .benefits h2,
+.color-natural, .text-white {
+    line-height: 126%;
+}
+
+.hero strong {
+    font-weight: 500;
 }
 
 .hero-button {
@@ -58,6 +71,7 @@ li::before {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
+
 
 .color-fity-green {
     color: #19B888;
@@ -247,6 +261,8 @@ footer p {
     letter-spacing: -1%;
     text-align: right;
     color: #19B888;
+    position: relative;
+    top: 6px;
 }
 
 .numbers-line {
@@ -379,29 +395,113 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 34px;
-        line-height: 42px;
+        font-size: 26px;
         width: 100%;
     }
 
     .hero h3 {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .hero br {
+        display: none;
     }
 
     .hero li {
         padding-top: 0px;
+        font-size: 16px;
     }
 
     .hero-button {
-        max-width: 240px;
+        max-width: 100%;
     }
 
     .hero-button p {
-        font-size: 14px;
+        font-size: 16px;
         padding-right: 10px;
+        padding-top: 3px;
+    }
+
+    .hero div.pl-5 {
+        padding-left: 0;
     }
 
     .pricing-plan {
         flex-wrap: wrap;
+    }
+
+    .benefits h4 {
+        font-size: 14px;
+    }
+
+    .benefits h2 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .li-benefits h5 {
+        font-size: 18px;
+    }
+
+    .li-benefits p {
+        font-size: 15px;
+    }
+
+    .w-\[60px\] {
+        width: 45px;
+    }
+
+    .about-fity h2 {
+        text-align: left;
+        font-size: 24px;
+        line-height: 126%;
+    }
+
+    .about-fity p {
+        font-size: 18px;
+        text-align: left;
+        line-height: 126%;
+    }
+
+    .about-fity .hero-button {
+        max-width: 100%;
+    }
+
+    .about-fity .hero-button p {
+        font-size: 16px;
+    }
+
+    .fity-features img {
+        border-radius: 36px;
+    }
+
+    .fity-features h6 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .fity-features p {
+        font-size: 21px;
+    }
+
+    .fity-features .mt-\[30px\] {
+        margin-top: 80px;
+    }
+
+    .fity-help {
+        font-size: 14px;
+    }
+
+    .fity-aplication h2 {
+        font-size: 24px;
+        line-height: 126%;
+    }
+
+    .fity-aplication br {
+        display: none;
+    }
+
+    .waiting-list h2 {
+
     }
 }
