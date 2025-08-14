@@ -18,9 +18,9 @@ const Footer = () => {
                 </a>
             </div>
             <div className="cookies-privacy flex mb-[20px] justify-center w-[100%]">
-                <a href="/privacy-policy" className="color-fity-green mr-[30px] font-medium text-[12px]">Politika privatnosti</a>
-                <a href="#" className="color-fity-green mr-[30px] font-medium text-[12px]">Uslovi korišćenja</a>
-                <a href="#" className="color-fity-green font-medium text-[12px]">Politika kolačića</a>
+                <a href="/politika-privatnosti" className="color-fity-green mr-[30px] font-medium text-[12px]">Politika privatnosti</a>
+                <a href="/uslovi-koriscenja" className="color-fity-green mr-[30px] font-medium text-[12px]">Uslovi korišćenja</a>
+                <a href="/politika-kolacica" className="color-fity-green font-medium text-[12px]">Politika kolačića</a>
             </div>
             <div>
                 <p className="text-center">© 2025 Fity App. Sva prava zadržana.</p>

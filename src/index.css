@@ -470,6 +470,19 @@ footer p {
     margin-bottom: 20px;
 }
 
+.privacy-page li {
+    list-style: circle;
+}
+
+.privacy-page li::before {
+    content: '' !important;
+}
+
+.privacy-page li::marker {
+    position: absolute;
+    left: 10px;
+}
+
 @media only screen and (max-width: 800px) {
 
     html, body {
