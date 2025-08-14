@@ -17,7 +17,7 @@ const Footer = () => {
                     <img src={instagram} alt="instagram" />
                 </a>
             </div>
-            <div className="cookies-privacy flex mb-[20px] justify-center w-[100%]">
+            <div className="flex mb-[20px] justify-center w-[100%]">
                 <a href="/politika-privatnosti" className="color-fity-green mr-[30px] font-medium text-[12px]">Politika privatnosti</a>
                 <a href="/uslovi-koriscenja" className="color-fity-green mr-[30px] font-medium text-[12px]">Uslovi korišćenja</a>
                 <a href="/politika-kolacica" className="color-fity-green font-medium text-[12px]">Politika kolačića</a>
