@@ -29,7 +29,7 @@ const Aplication = () => {
                                 <div>
                                     <div className="green-numbers">1</div>
                                     <h5 className="block">Unesi cilj i podatke</h5>
-                                    <p>Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                                    <p>Unesi svoj cilj i osnovne podatke poput visine, težine, godina, nivoa fizičke aktivnosti i ličnih preferenci.</p>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -38,7 +38,7 @@ const Aplication = () => {
                                 <div>
                                     <div className="green-numbers">2</div>
                                     <h5 className="block">Generiši plan ishrane</h5>
-                                    <p>Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                                    <p>Na osnovu unetih informacija Fity App kreira tvoj lični plan obroka uz recepte i preporučene porcije.</p>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -47,7 +47,7 @@ const Aplication = () => {
                                 <div>
                                     <div className="green-numbers">3</div>
                                     <h5 className="block">Nabavi namirnice</h5>
-                                    <p>Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                                    <p>Dobijaš listu potrebnih namirnica kako bi nedeljna kupovina bila brza i jednostavna, bez suvišnih troškova.</p>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -56,7 +56,7 @@ const Aplication = () => {
                                 <div>
                                     <div className="green-numbers">4</div>
                                     <h5 className="block">Kuvaj i prati plan</h5>
-                                    <p>Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                                    <p>Prati plan i beleži svoj napredak u aplikaciji kako bi ostao/la motivisan/a i na pravom putu ka svom cilju.</p>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -75,28 +75,28 @@ const Aplication = () => {
                             <div>
                                 <div className="green-numbers">1</div>
                                 <h5 className="block">Unesi cilj i podatke</h5>
-                                <p>Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                                <p>Unesi svoj cilj i osnovne podatke poput visine, težine, godina, nivoa fizičke aktivnosti i ličnih preferenci.</p>
                             </div>
                         </div>
                         <div className="aplication-funcionality flex w-3">
                             <div>
                                 <div className="green-numbers">2</div>
                                 <h5 className="block">Generiši plan ishrane</h5>
-                                <p>Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                                <p>Na osnovu unetih informacija Fity App kreira tvoj lični plan obroka uz recepte i preporučene porcije.</p>
                             </div>
                         </div>
                         <div className="aplication-funcionality flex w-3">
                             <div>
                                 <div className="green-numbers">3</div>
                                 <h5 className="block">Nabavi namirnice</h5>
-                                <p>Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                                <p>Dobijaš listu potrebnih namirnica kako bi nedeljna kupovina bila brza i jednostavna, bez suvišnih troškova.</p>
                             </div>
                         </div>
                         <div className="aplication-funcionality flex w-3">
                             <div>
                                 <div className="green-numbers">4</div>
                                 <h5 className="block">Kuvaj i prati plan</h5>
-                                <p>Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+                                <p>Prati plan i beleži svoj napredak u aplikaciji kako bi ostao/la motivisan/a i na pravom putu ka svom cilju.</p>
                             </div>
                         </div>
                     </div>

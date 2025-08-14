@@ -158,9 +158,34 @@ footer p {
 }
 
 .manifesto {
-    background-image: url("./assets/images/Nenaslovljeni dizajn 2.png");
-    background-size: cover;
+    /*background-image: url("./assets/images/Nenaslovljeni dizajn 2.png");*/
+    /*background-size: cover;*/
     padding: 200px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.manifesto video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.manifesto .bg {
+    background-color: rgba(23, 52, 48, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+}
+
+.manifesto .container {
+    z-index: 2;
+    position: relative;
 }
 
 .launch {
@@ -364,6 +389,87 @@ footer p {
     border-top: 1px solid #617D7933;
 }
 
+.policy-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.policy-top a {
+    background: #173430;
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-radius: 25px;
+    width: 330px;
+    height: 50px;
+    font-family: TT Norms Pro;
+    font-weight: 500;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: -1%;
+    text-align: center;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.privacy-page {
+    padding: 100px 10%;
+}
+
+.privacy-page h1 {
+    font-family: TT Norms Pro;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 50px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    color: #173430;
+    margin-bottom: 40px;
+}
+
+.privacy-page p, .privacy-page p a, .privacy-page li {
+    font-family: TT Norms Pro;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    color: #173430;
+}
+
+.privacy-page p a {
+    color: #19B888;
+}
+
+.privacy-page h2 {
+    font-family: TT Norms Pro;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 35px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    color: #173430;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+
+.privacy-page h3 {
+    font-family: TT Norms Pro;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 28px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    color: #173430;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 800px) {
 
     html, body {
@@ -419,6 +525,15 @@ footer p {
 
     .launch {
         padding-top: 60px;
+    }
+
+    .manifesto video {
+        display: none;
+    }
+
+    .manifesto {
+        background-image: url("./assets/images/Nenaslovljeni dizajn 2.png");
+        background-size: cover;
     }
 
     .aplication-funcionality h5 {

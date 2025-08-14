@@ -1,26 +1,15 @@
+import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 import './App.css';
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
-import Benefits from "./components/Benefits";
-import About from "./components/About";
-import Aplication from "./components/Aplication";
-import Manifesto from "./components/Manifesto";
-import Launch from "./components/Launch";
-import WaitingList from "./components/WaitingList";
+import Home from './pages/Home';
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
-    <div>
-      <Hero />
-        <Benefits />
-        <About />
-        <Aplication />
-        <WaitingList />
-        <Manifesto />
-        <Launch />
-      <Footer />
-    </div>
+  <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+  </Routes>
   );
 };
 
