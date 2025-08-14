@@ -28,14 +28,14 @@ const About = () => {
                 </div>
             </div>
             <div className="block md:flex flex-wrap content-between mt-[50px] md:mt-[150px] fity-features">
-                <div className="hidden md:block orange-section w-1/1 md:w-1/2 pr-0 md:pr-[40px]">
+                <div style={{ order: 'unset !important' }} className="md:block orange-section w-1/1 md:w-1/2 pr-0 md:pr-[40px]">
                     <img src={blue} alt="blue section"/>
                 </div>
                 <div className="w-1/1 md:w-1/2 mt-auto mb-auto pr-0 pl-0 md:pr-[100px] md:pl-[40px]">
                     <h6>Brzi, zdravi i ukusni obroci</h6>
                     <p>Plan ishrane se kreira od zdravih i ukusnih namirnica i jednostavnih recepata. Priprema obroka traje od 5 do 20 minuta, uz jasne instrukcije u svakom koraku.</p>
                 </div>
-                <div className="mt-[30px] md:mt-0 md:hidden block orange-section w-1/1 md:w-1/2 pr-0 md:pr-[40px]">
+                <div className="hidden mt-[30px] md:mt-0 md:hidden orange-section w-1/1 md:w-1/2 pr-0 md:pr-[40px]">
                     <img src={blue} alt="blue section"/>
                 </div>
                 <div className="block md:flex flex-wrap content-between t-[50px] md:mt-[150px] fity-features">
@@ -48,14 +48,14 @@ const About = () => {
                     </div>
                 </div>
                 <div className="block md:flex flex-wrap content-between mt-[50px] md:mt-[150px] fity-features">
-                    <div className="hidden md:block w-1/1 pr-0 green-section md:w-1/2 md:pr-[40px]">
+                    <div style={{ order: 'unset !important' }} className="md:block w-1/1 pr-0 green-section md:w-1/2 md:pr-[40px]">
                         <img src={green} alt="green section"/>
                     </div>
                     <div className="w-1/1 md:w-1/2 mt-auto mb-auto pr-0 pl-0 md:pr-[100px] md:pl-[40px]">
                         <h6>Sloboda izbora namirnica</h6>
                         <p>Više ne moraš da se ograničavaš. Fity ti omogućava da u plan ishrane uključiš više zdravih namirnica koje voliš i izbaciš one koje jednostavno ne želiš.</p>
                     </div>
-                    <div className="mt-[30px] md:mt-0 md:hidden block w-1/1 pr-0 green-section md:w-1/2 md:pr-[40px]">
+                    <div className="hidden mt-[30px] md:mt-0 md:hidden w-1/1 pr-0 green-section md:w-1/2 md:pr-[40px]">
                         <img src={green} alt="green section"/>
                     </div>
                 </div>
@@ -69,14 +69,14 @@ const About = () => {
                     </div>
                 </div>
                 <div className="block md:flex flex-wrap content-between mt-[50px] md:mt-[150px] fity-features">
-                    <div className="hidden md:block w-1/1 apricot-section md:w-1/2 pr-0 md:pr-[40px]">
+                    <div style={{ order: 'unset !important' }} className="md:block w-1/1 apricot-section md:w-1/2 pr-0 md:pr-[40px]">
                         <img src={apricot} alt="apricot section"/>
                     </div>
                     <div className="w-1/1 md:w-1/2 mt-auto mb-auto pr-0 pl-0 md:pr-[100px] md:pl-[40px]">
                         <h6>Saveti i podrška u toku procesa</h6>
                         <p>Koliko je važno ostvariti lične ciljeve, podjednako važno je naučiti i trajno usvojiti zdrave navike u vezi ishrane. Fity kroz stručne savete i podršku to čini mogućim.</p>
                     </div>
-                    <div className="mt-[30px] md:mt-0 md:hidden block w-1/1 apricot-section md:w-1/2 pr-0 md:pr-[40px]">
+                    <div className="hidden mt-[30px] md:mt-0 md:hidden w-1/1 apricot-section md:w-1/2 pr-0 md:pr-[40px]">
                         <img src={apricot} alt="apricot section"/>
                     </div>
                 </div>

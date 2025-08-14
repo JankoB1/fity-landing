@@ -5,6 +5,7 @@ import cup from '../assets/images/hero-1.png';
 import mobile from '../assets/images/hero-2.png';
 import ring from '../assets/icons/ring-icon.svg';
 import heart from '../assets/images/heart-fity.svg';
+import mobHero from '../assets/images/mob-hero.png';
 
 const Hero = () => {
     return (
@@ -23,6 +24,7 @@ const Hero = () => {
                     <p className="text-white pr-4 text-[18px] font-medium">Postani Fity Starter i ostvari benefite</p>
                     <img src={heart} alt="heart icon" />
                 </a>
+                <img className="block md:hidden mob-her" src={mobHero} alt="mobile hero"/>
                 <div className="flex gap-2 items-center pb-32 pl-5">
                     <p className="text-base">Uskoro dostupno za <strong>android i IOS uređaje</strong></p>
                     <img src={apple} alt="apple" className="w-[50]"/>

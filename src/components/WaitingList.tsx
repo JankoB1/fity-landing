@@ -13,7 +13,7 @@ const WaitingList = () => {
                         <img src={heart} alt="ring icon" />
                     </a>
                 </div>
-                <div className="w-1/1 md:w-1/2 pl-0 md:pl-[40px] mt-auto mb-auto">
+                <div className="hidden md:block w-1/1 md:w-1/2 pl-0 md:pl-[40px] mt-auto mb-auto">
                     <img className="w-[100%]" src={people} alt="people" />
                 </div>
             </div>

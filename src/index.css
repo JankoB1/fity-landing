@@ -365,8 +365,9 @@ footer p {
 }
 
 @media only screen and (max-width: 800px) {
-    .cup-hero {
-        display: none;
+
+    html, body {
+        overflow-x: hidden;
     }
 
     .hero, .benefits, .about-fity, .aplication, .waiting-list {
@@ -386,17 +387,46 @@ footer p {
         margin-bottom: 30px;
     }
 
+    .benefits {
+        background-image: url("../src/assets/images/fity-pom-bg.png");
+        background-size: cover;
+        background-position: center;
+        padding-top: 300px;
+    }
+
     .manifesto {
-        padding: 50px 0;
+        padding: 120px 0;
+    }
+
+    .aplication {
+        margin-top: 50px;
     }
 
     .hero div {
         width: 100%;
     }
 
+    .timer-number {
+        width: 36px;
+        height: 49px;
+        font-size: 26px;
+    }
+
     .hero h1 {
         font-size: 26px;
         width: 100%;
+    }
+
+    .launch {
+        padding-top: 60px;
+    }
+
+    .aplication-funcionality h5 {
+        font-size: 20px;
+    }
+
+    .aplication-funcionality p {
+        font-size: 15px;
     }
 
     .hero h3 {
@@ -473,6 +503,8 @@ footer p {
 
     .fity-features img {
         border-radius: 36px;
+        margin-top: 80px;
+        margin-bottom: 30px;
     }
 
     .fity-features h6 {
@@ -485,7 +517,12 @@ footer p {
     }
 
     .fity-features .mt-\[30px\] {
-        margin-top: 80px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .about-fity .mt-\[50px\] {
+        margin-top: 0;
     }
 
     .fity-help {
@@ -495,6 +532,12 @@ footer p {
     .fity-aplication h2 {
         font-size: 24px;
         line-height: 126%;
+        padding-right: 5%;
+    }
+
+    .lis-box > span {
+        padding-left: 0;
+        justify-content: center;
     }
 
     .fity-aplication br {
@@ -502,6 +545,173 @@ footer p {
     }
 
     .waiting-list h2 {
+        font-size: 24px;
+        line-height: 126%;
+    }
 
+    .waiting-list h2 br {
+        display: none;
+    }
+
+    .waiting-list p {
+        font-size: 18px;
+    }
+
+    .waiting-list a p {
+        font-size: 16px;
+    }
+
+    .manifesto h4 {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .manifesto {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .manifesto h2 {
+        font-size: 26px;
+        text-align: left;
+        margin-bottom: 25px;
+        margin-top: 10px;
+    }
+
+    .manifesto p {
+        font-size: 20px;
+        line-height: 126%;
+        text-align: left;
+    }
+
+    .launch-central h2 {
+        font-size: 24px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .launch-central h2 br {
+        display: none;
+    }
+
+    .launch-central p {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .launch-central {
+        padding-bottom: 0;
+        margin-bottom: 40px;
+    }
+
+    .reservation-box {
+        background: #173430;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .reservation-box h5 {
+        font-size: 14px;
+    }
+
+    .num-bold {
+        font-size: 39px;
+        color: white;
+    }
+
+    .num-light {
+        font-size: 30px;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .lis-box {
+        width: 87%;
+        margin: 40px auto;
+    }
+
+    .lis-box p {
+        font-size: 18px;
+    }
+
+    .hero-button p {
+        font-size: 16px;
+    }
+
+    .launch-down h3 {
+        font-size: 24px;
+    }
+
+    .launch-down p {
+        font-size: 18px;
+        margin: auto;
+        width: 90%;
+    }
+
+    #launch > img {
+        display: none;
+    }
+
+    .pricing-plan {
+        width: 90%;
+        gap: 1rem;
+    }
+
+    .pricing-plan div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 25px;
+    }
+
+    .pricing-plan p {
+        margin-bottom: 0;
+    }
+
+    .cup-hero {
+        display: block;
+        width: 300px;
+        right: -26%;
+        top: -20px;
+    }
+
+    .mobile-hero {
+        display: none;
+    }
+
+    .mob-her {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .about-fity .block {
+        display: flex;
+    }
+
+    .about-fity div:first-child {
+        order: 2;
+    }
+
+    .aplication-funcionality {
+        width: 100%;
+        border-radius: 25px;
+        background: white;
+        box-shadow: 0px 5px 10px 0px #00000014;
+        padding: 20px 24px;
+    }
+
+    .aplication {
+      padding-right: 0;
+    }
+
+    .swiper-wrapper {
+        padding-bottom: 20px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #617D79 !important;
+    }
+
+    .waiting-list {
+        background-color: #F2F2F2;
     }
 }
