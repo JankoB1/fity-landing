@@ -11,7 +11,7 @@ function Thanks() {
                     <img src={logo} className="hero-logo w-[65px]" alt="logo"/>
                     <a href="/"><img src={arrow} alt=""/>Vrati se na početnu stranicu</a>
                 </div>
-                <h1 style={{ paddingTop: '100px' }}>Hvala na prijavi!</h1>
+                <h1 style={{ paddingTop: '200px', paddingBottom: '200px', textAlign: 'center' }}>Hvala na prijavi!</h1>
             </div>
             <Footer></Footer>
         </>

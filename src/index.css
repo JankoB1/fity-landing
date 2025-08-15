@@ -842,4 +842,12 @@ footer p {
     .waiting-list {
         background-color: #F2F2F2;
     }
+
+    .policy-top a {
+        width: 280px;
+    }
+
+    .privacy-page {
+        padding: 100px 5%;
+    }
 }
