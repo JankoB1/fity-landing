@@ -14,7 +14,7 @@ function App() {
       <Route path="/politika-privatnosti" element={<PrivacyPolicy />} />
       <Route path="/uslovi-koriscenja" element={<Terms />} />
       <Route path="/politika-kolacica" element={<CookiesTerms />} />
-      <Route path="/upitnik/hvala-na-prijavi" element={<Thanks />} />
+      <Route path="/hvala-na-prijavi" element={<Thanks />} />
   </Routes>
   );
 };
