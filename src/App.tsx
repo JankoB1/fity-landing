@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import CookiesTerms from "./pages/CookiesTerms";
+import Thanks from "./pages/Thanks";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/politika-privatnosti" element={<PrivacyPolicy />} />
       <Route path="/uslovi-koriscenja" element={<Terms />} />
       <Route path="/politika-kolacica" element={<CookiesTerms />} />
+      <Route path="/upitnik/hvala-na-prijavi" element={<Thanks />} />
   </Routes>
   );
 };
