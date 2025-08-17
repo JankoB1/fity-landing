@@ -8,7 +8,7 @@ const Benefits = () => {
         <section className="benefits mt-[-80px] z-10 relative">
             <div className="w-1/1 md:w-3/5">
                 <h4 className="fity-help text-[18px] font-bold color-fity-green pb-[30px]">KOME FITY POMAŽE</h4>
-                <h2 className="text-[20px] md:text-[32px] text-white mb-20 lh-cus">Ukoliko se dugo mučiš sa restriktivnim dijetama, odricanjem od hrane ili nemaš vremena, volje i
+                <h2 className="text-[20px] md:text-[30px] text-white mb-20 lh-cus">Ukoliko se dugo mučiš sa restriktivnim dijetama, odricanjem od hrane ili nemaš vremena, volje i
                     znanja da samostalno sastaviš i pratiš plan ishrane koji će te odvesti do cilja, Fity je pravo
                     rešenje za tebe.</h2>
                 <div className="block md:flex flex-wrap justify-between gap-y-12">
