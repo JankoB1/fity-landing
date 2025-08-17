@@ -42,10 +42,15 @@ code {
 }
 
 .hero-button {
-  background-color: #19B888;
-  padding: 14px 20px;
-  border-radius: 25px;
-  margin-bottom: 30px;
+    background-color: #19B888;
+    padding: 14px 20px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-button:hover {
+    background-color: #173430;
 }
 
 .lh-cus {
@@ -102,7 +107,7 @@ li::before {
 
 .fity-features p {
     color: #173430;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 400;
     line-height: 126%;
 }
@@ -169,8 +174,14 @@ footer p {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 120%;
+    height: 100%;
+    max-width: 120%;
     z-index: 0;
+}
+
+img.w-1\/5 {
+    width: 15%;
 }
 
 .manifesto .bg {
@@ -413,6 +424,15 @@ footer p {
     column-gap: 15px;
 }
 
+.about-fity h2 {
+    line-height: 126%;
+}
+
+.about-fity .md\:w-3\/5 {
+    max-width: 1000px;
+    width: 80% !important;
+}
+
 .privacy-page {
     padding: 100px 10%;
 }
@@ -483,10 +503,26 @@ footer p {
     left: 10px;
 }
 
+.about-fity p br, .manifesto p br {
+    display: none;
+}
+
+.hero .w-3\/5 {
+    width: 70%;
+}
+
 @media only screen and (max-width: 800px) {
 
     html, body {
         overflow-x: hidden;
+    }
+
+    .manifesto p br {
+        display: block;
+    }
+
+    .aplication .swiper {
+        margin-bottom: 100px;
     }
 
     .hero, .benefits, .about-fity, .aplication, .waiting-list {
@@ -541,7 +577,10 @@ footer p {
     }
 
     .manifesto video {
-        display: none;
+        width: 400%;
+        height: 100%;
+        max-width: 1000%;
+        left: -100%;
     }
 
     .manifesto {
@@ -765,6 +804,12 @@ footer p {
         font-size: 16px;
     }
 
+    .launch-down {
+        margin-top: 50px;
+        padding-top: 36px;
+        width: 90%;
+    }
+
     .launch-down h3 {
         font-size: 24px;
     }
@@ -773,6 +818,10 @@ footer p {
         font-size: 18px;
         margin: auto;
         width: 90%;
+    }
+
+    .hero .w-3\/5 {
+        width: 100%;
     }
 
     #launch > img {
@@ -807,8 +856,15 @@ footer p {
     }
 
     .mob-her {
-        width: 100%;
+        width: 110%;
         margin: 30px auto;
+        max-width: 110%;
+        position: relative;
+        right: 5%;
+    }
+
+    .about-fity p br {
+        display: block;
     }
 
     .about-fity .block {
@@ -817,6 +873,11 @@ footer p {
 
     .about-fity div:first-child {
         order: 2;
+    }
+
+    .about-fity .md\:w-3\/5 {
+        width: 100% !important;
+        padding: 0 !important;
     }
 
     .aplication-funcionality {
@@ -849,5 +910,22 @@ footer p {
 
     .privacy-page {
         padding: 100px 5%;
+    }
+
+    .hero li.pb-2\.5 {
+        padding-bottom: 0;
+    }
+
+    .hero li::before {
+        transform: scale(0.8);
+        display: inline-block;
+        transform-origin: left center;
+        vertical-align: middle;
+        padding-right: 8px;
+        top: 2px;
+    }
+
+    p.text-base {
+        font-size: 14px;
     }
 }

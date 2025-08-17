@@ -133,7 +133,7 @@ const Launch = () => {
                     <p className="flex gap-5"><img src={check} alt=""/>Fity Starter poklon paket i bedž na profilu</p>
                     <p className="flex gap-5"><img src={check} alt=""/>Kompletan program vežbanja za početnike</p>
                     <a href="/upitnik" className="flex w-[430px] hero-button mt-8 justify-center">
-                        <p className="text-white pr-4 text-[18px] font-medium">Popuni upitnik i postani Fity Starter član</p>
+                        <p className="text-white pr-4 text-[18px] font-medium">Popuni upitnik i postani Starter član</p>
                         <img src={message} alt="ring icon" />
                     </a>
                     <span>Upitnik ti neće oduzeti više od 60 sekundi <img src={timer} alt=""/></span>

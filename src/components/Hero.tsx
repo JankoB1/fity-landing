@@ -25,7 +25,7 @@ const Hero = () => {
                     <img src={heart} alt="heart icon" />
                 </a>
                 <img className="block md:hidden mob-her" src={mobHero} alt="mobile hero"/>
-                <div className="flex gap-2 items-center pb-32 pl-5">
+                <div className="flex gap-2 items-center pb-20 pl-5">
                     <p className="text-base">Uskoro dostupno za <strong>android i IOS uređaje</strong></p>
                     <img src={apple} alt="apple" className="w-[50]"/>
                     <img src={android} alt="android" />
