@@ -508,7 +508,7 @@ img.w-1\/5 {
 }
 
 .timer-text {
-    color: white;
+    color: #173430;
 }
 
 .hero .w-3\/5 {
@@ -570,6 +570,10 @@ img.w-1\/5 {
         height: 41px;
         border-radius: 10px;
         font-size: 24px;
+    }
+
+    .timer-text {
+        color: white;
     }
 
     .timer .grid.grid-cols-8.gap-5 {
