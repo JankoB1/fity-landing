@@ -507,6 +507,10 @@ img.w-1\/5 {
     display: none;
 }
 
+.timer-text {
+    color: white;
+}
+
 .hero .w-3\/5 {
     width: 70%;
 }
@@ -562,9 +566,14 @@ img.w-1\/5 {
     }
 
     .timer-number {
-        width: 36px;
-        height: 49px;
-        font-size: 26px;
+        width: 28px;
+        height: 41px;
+        border-radius: 10px;
+        font-size: 24px;
+    }
+
+    .timer .grid.grid-cols-8.gap-5 {
+        gap: 0.75rem !important;
     }
 
     .hero h1 {
