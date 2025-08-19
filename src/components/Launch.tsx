@@ -93,7 +93,7 @@ const Launch = () => {
             </div>
             <div className="launch-row md:grid block grid-cols-2 gap-24">
                 <div className="reservation-box md:mb-0 mb-12">
-                    <h5>Broj rezervacija</h5>
+                    <h5>Broj Fity starter prijava</h5>
                     <div className="numbers">
                         <div className="flex justify-between items-center">
                             <p className="num-bold ">{activeCount} <span className="num-light"> / 300</span></p>
