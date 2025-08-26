@@ -168,7 +168,7 @@ const Launch = () => {
                         <img src={nameIcon} alt=""/>
                     </div>
                     <div className="form-group">
-                        <input placeholder="example@email.com" onChange={(e) => setEmail(e.target.value)} type="email" name="email" value={email}/>
+                        <input placeholder="email@email.com" onChange={(e) => setEmail(e.target.value)} type="email" name="email" value={email}/>
                         <img src={emailIcon} alt=""/>
                     </div>
                     <button onClick={createSubscriber}>Postani Fity Starter član <img src={check} style={{ filter: 'brightness(0) invert(1)' }} alt=""/></button>
