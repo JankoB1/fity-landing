@@ -3,13 +3,19 @@ import plate2 from '../assets/images/chicken-6262038_1280 1.png';
 import message from "../assets/images/message.svg";
 import check from '../assets/images/check.svg';
 import timer from '../assets/images/timer.svg';
+import nameIcon from '../assets/images/name-surname.svg';
+import emailIcon from '../assets/images/email.svg';
+import money from '../assets/images/money.svg';
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {useNavigate, useNavigation} from "react-router-dom";
 
 const Launch = () => {
 
     const TZ = 'Europe/Belgrade';
     const [activeCount, setActiveCount] = useState(0);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
 
     function nowInTZMs(tz: string): number {
         const dtf = new Intl.DateTimeFormat('en-US', {
@@ -66,6 +72,36 @@ const Launch = () => {
     }
 
     const [t, setT] = useState(() => computeDHm(TZ));
+    const navigate = useNavigate();
+
+    const createSubscriber = () => {
+        if(!name || !email) {
+            alert('Molimo vas unesite ime i email adresu.');
+            return;
+        }
+
+        axios.post("https://connect.mailerlite.com/api/subscribers", {
+            email: email,
+            fields: {
+                name: name,
+            },
+            groups: ['161884797311910956'],
+            resubscribe: true,
+        }, {
+            headers: {
+                "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiYTRjMDAwNTgzNjZlMDEzMDI0MzMyNzJjOTgwYTA0NzMxMzViNDMxNjZhNzFiZGMwZjQ3ODY4MDFiODgwZDI5OTU4NDI1NTVjNDk5MjgyNTkiLCJpYXQiOjE3NTUxOTc5MTAuNDAxMzMsIm5iZiI6MTc1NTE5NzkxMC40MDEzMzMsImV4cCI6NDkxMDg3MTUxMC4zOTc2OCwic3ViIjoiODA1NDMyIiwic2NvcGVzIjpbXX0.WHVKyWScwktAHSdWtYEnCwPjMdmj10BPsb-xnhVtdIJZw3CBorz4gusjXukavPucBBslNbOL2RPXntvb50fp2riCPQn_AUo6jzEXIkmlivILqDtl_0KiIdjXlsO3oLA2CqlPG6hWDAjmmtO3ELGNN732akMxzjJY8qvOKXU5GBkpoC1E3jDrptU3sLmjkcSmGo19Avsc2jRRAmJLRb6WecAFkZzCzB9Esp-QLUOQaotOFzOz9zcC5XLW_ob1ktoa0hwWQItSFFBAOxz6nQteppsBSP7URk_7awd7BbsJrvY1bUGzxDkmawcfI9j_b7YCSCiCZltecSG25ofg_MQddHPmdLSKVgMaixCEW8PeMtg-zS4NH0l_OyW5TkzNzvQcoY7o9-lzNUWCbkqcupHo9HULUxZPpa2I9sl1-Ln7-YL98GBKUu_Uvhb0SPCOa3kfa-Zve2tJwdHyYi8uiA1FlLyU1wP8DF3JgCoz6fTF1pSWUGkk3YmVsKj18H-re2IqJfTveLurUfPuGbIknracxoQtxomgTovthofXEMZlHLmjuU6LeA2gynVOBrb-ssJM9BQ3bBoMWHelnbAk3Yg4aOu4m4UKfu-CaBxAi7CCQohmdWbtO84U2d1IwdjR8xfOZHt4MMaJJT19NAiL7rVn27tMdHgypME53Z9BAu0Pr3Y",
+            },
+        })
+            .then(res => {
+                setName('');
+                setEmail('');
+                navigate('/hvala-na-prijavi', { replace: true });
+            })
+            .catch(err => {
+                console.error(err);
+                alert('Došlo je do greške prilikom prijave. Molimo vas pokušajte ponovo.');
+            });
+    }
 
     useEffect(() => {
         const id = setInterval(() => setT(computeDHm(TZ)), 1000);
@@ -78,7 +114,7 @@ const Launch = () => {
                 "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiYTRjMDAwNTgzNjZlMDEzMDI0MzMyNzJjOTgwYTA0NzMxMzViNDMxNjZhNzFiZGMwZjQ3ODY4MDFiODgwZDI5OTU4NDI1NTVjNDk5MjgyNTkiLCJpYXQiOjE3NTUxOTc5MTAuNDAxMzMsIm5iZiI6MTc1NTE5NzkxMC40MDEzMzMsImV4cCI6NDkxMDg3MTUxMC4zOTc2OCwic3ViIjoiODA1NDMyIiwic2NvcGVzIjpbXX0.WHVKyWScwktAHSdWtYEnCwPjMdmj10BPsb-xnhVtdIJZw3CBorz4gusjXukavPucBBslNbOL2RPXntvb50fp2riCPQn_AUo6jzEXIkmlivILqDtl_0KiIdjXlsO3oLA2CqlPG6hWDAjmmtO3ELGNN732akMxzjJY8qvOKXU5GBkpoC1E3jDrptU3sLmjkcSmGo19Avsc2jRRAmJLRb6WecAFkZzCzB9Esp-QLUOQaotOFzOz9zcC5XLW_ob1ktoa0hwWQItSFFBAOxz6nQteppsBSP7URk_7awd7BbsJrvY1bUGzxDkmawcfI9j_b7YCSCiCZltecSG25ofg_MQddHPmdLSKVgMaixCEW8PeMtg-zS4NH0l_OyW5TkzNzvQcoY7o9-lzNUWCbkqcupHo9HULUxZPpa2I9sl1-Ln7-YL98GBKUu_Uvhb0SPCOa3kfa-Zve2tJwdHyYi8uiA1FlLyU1wP8DF3JgCoz6fTF1pSWUGkk3YmVsKj18H-re2IqJfTveLurUfPuGbIknracxoQtxomgTovthofXEMZlHLmjuU6LeA2gynVOBrb-ssJM9BQ3bBoMWHelnbAk3Yg4aOu4m4UKfu-CaBxAi7CCQohmdWbtO84U2d1IwdjR8xfOZHt4MMaJJT19NAiL7rVn27tMdHgypME53Z9BAu0Pr3Y",
             },
         })
-            .then(res => setActiveCount(res.data.data[0].active_count))
+            .then(res => setActiveCount(res.data.data[0].active_count + res.data.data[1].active_count))
             .catch(err => console.error(err));
     });
 
@@ -126,17 +162,25 @@ const Launch = () => {
                         </div>
                     </div>
                 </div>
+                <div className="submit-form">
+                    <div className="form-group">
+                        <input placeholder="Ime i prezime" onChange={(e) => setName(e.target.value)} type="text" name="name" value={name}/>
+                        <img src={nameIcon} alt=""/>
+                    </div>
+                    <div className="form-group">
+                        <input placeholder="example@email.com" onChange={(e) => setEmail(e.target.value)} type="email" name="email" value={email}/>
+                        <img src={emailIcon} alt=""/>
+                    </div>
+                    <button onClick={createSubscriber}>Postani Fity Starter član <img src={check} style={{ filter: 'brightness(0) invert(1)' }} alt=""/></button>
+                    <p>Prijava je potpuno besplatna <img src={money} alt=""/></p>
+                </div>
+                <h2 className="l-h2">Šta dobijaš prijavom za<br/>Fity Starter ekipu?</h2>
                 <div className="lis-box">
                     <p className="flex gap-5"><img src={check} alt=""/>50% niža cena pretplate koja važi zauvek</p>
                     <p className="flex gap-5"><img src={check} alt=""/>Rani pristup novim funkcionalnostima</p>
                     <p className="flex gap-5"><img src={check} alt=""/>Učešće u razvoju aplikacije i predlozima</p>
                     <p className="flex gap-5"><img src={check} alt=""/>Fity Starter poklon paket i bedž na profilu</p>
                     <p className="flex gap-5"><img src={check} alt=""/>Kompletan program vežbanja za početnike</p>
-                    <a href="/upitnik" className="flex w-[430px] hero-button mt-8 justify-center">
-                        <p className="text-white pr-4 text-[18px] font-medium">Popuni upitnik i postani Starter član</p>
-                        <img src={message} alt="ring icon" />
-                    </a>
-                    <span>Upitnik ti neće oduzeti više od 60 sekundi <img src={timer} alt=""/></span>
                 </div>
             </div>
         </div>

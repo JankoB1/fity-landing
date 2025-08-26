@@ -515,10 +515,101 @@ img.w-1\/5 {
     width: 70%;
 }
 
+.form-group {
+    border-radius: 25px;
+    background-color: #F2F2F2;
+    padding: 16px 24px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group input {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font-family: TT Norms Pro;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: -1%;
+    color: #617D79;
+    width: 100% !important;
+}
+
+.form-group input::placeholder {
+    color: #617D79CC;
+}
+
+.submit-form button {
+    background: #19B888;
+    border-radius: 25px;
+    width: 100%;
+    font-family: TT Norms Pro;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: -1%;
+    text-align: center;
+    color: white;
+    padding: 16px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.form-group img {
+    position: absolute;
+    right: 24px;
+    top: 16px;
+}
+
+.submit-form p {
+    font-family: TT Norms Pro;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    text-align: center;
+    vertical-align: middle;
+    color: #173430;
+    margin-top: 27px;
+    border-bottom: 1px solid #617D7933;
+    padding-bottom: 55px;
+}
+
+.submit-form p img {
+    display: inline;
+}
+
+.l-h2 {
+    font-family: TT Norms Pro;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 32px;
+    leading-trim: NONE;
+    line-height: 126%;
+    letter-spacing: -1%;
+    color: #173430;
+}
+
 @media only screen and (max-width: 800px) {
 
     html, body {
         overflow-x: hidden;
+    }
+
+    .l-h2 {
+        padding: 40px 5% 0;
+        font-size: 26px;
     }
 
     .manifesto p br {
@@ -527,6 +618,10 @@ img.w-1\/5 {
 
     .aplication .swiper {
         margin-bottom: 100px;
+    }
+
+    .submit-form {
+        padding: 40px 5% 0;
     }
 
     .hero, .benefits, .about-fity, .aplication, .waiting-list {
