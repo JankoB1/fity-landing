@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import './assets/fonts/fonts.css';
 
 @tailwind base;
@@ -9,27 +16,28 @@ html {
 }
 
 body {
-  margin: 0;
-  font-family: 'TT Norms Pro', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'TT Norms Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 .hero {
-  padding-top: 100px;
-  padding-left: 100px;
-  padding-right: 100px;
-  background: linear-gradient(290.72deg, rgba(157, 208, 48, 0.5) 0.98%, rgba(157, 208, 48, 0.2) 81.51%);
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background: -o-linear-gradient(159.28deg, rgba(157, 208, 48, 0.5) 0.98%, rgba(157, 208, 48, 0.2) 81.51%);
+    background: linear-gradient(290.72deg, rgba(157, 208, 48, 0.5) 0.98%, rgba(157, 208, 48, 0.2) 81.51%);
 
 }
 
 .hero-logo {
-  padding-bottom: 60px;
+    padding-bottom: 60px;
 }
 
 .hero h1, .hero h3, .benefits h2,
@@ -46,6 +54,8 @@ code {
     padding: 14px 20px;
     border-radius: 25px;
     margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
@@ -62,15 +72,17 @@ p strong {
 }
 
 li::before {
-  content: url(./assets/icons/check-icon.svg);
-  padding-right: 20px;
-  align-items: center;
-  position: relative;
-  top: 5px;
+    content: url(./assets/icons/check-icon.svg);
+    padding-right: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    top: 5px;
 }
 
 .benefits {
-  background-image: url("./assets/images/DSC_6954 1@2x.png");
+    background-image: url("./assets/images/DSC_6954 1@2x.png");
     background-size: cover;
     padding: 120px 100px;
     border-top-left-radius: 50px;
@@ -158,8 +170,15 @@ footer p {
     font-size: 25px;
     font-weight: 500;
     text-align: center;
+    -ms-grid-column-align: center;
     justify-self: center;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.order-unset {
+    order: unset !important;
 }
 
 .manifesto {
@@ -318,6 +337,7 @@ img.w-1\/5 {
     position: absolute;
     left: 0;
     top: 0;
+    background: -o-radial-gradient(96.67% 50%, 148.52% 334.98%, #4FC264 0%, #19B888 42.71%, #19B888 100%);
     background: radial-gradient(148.52% 334.98% at 96.67% 50%, #4FC264 0%, #19B888 42.71%, #19B888 100%);
     width: 0%;
     margin: 0;
@@ -347,7 +367,11 @@ img.w-1\/5 {
     vertical-align: middle;
     color: #173430;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
     column-gap: 10px;
     padding-left: 50px;
 }
@@ -355,8 +379,14 @@ img.w-1\/5 {
 .timer-number {
     border: 1px solid #17343033;
     background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 56px;
     width: 43px;
@@ -401,13 +431,21 @@ img.w-1\/5 {
 }
 
 .policy-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .policy-top a {
     background: #173430;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     color: white;
     border-radius: 25px;
@@ -420,7 +458,11 @@ img.w-1\/5 {
     line-height: 100%;
     letter-spacing: -1%;
     text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-column-gap: 15px;
+    -moz-column-gap: 15px;
     column-gap: 15px;
 }
 
@@ -526,6 +568,7 @@ img.w-1\/5 {
 .form-group input {
     background-color: transparent;
     outline: none;
+    -webkit-box-shadow: none;
     box-shadow: none;
     border: none;
     font-family: TT Norms Pro;
@@ -537,6 +580,22 @@ img.w-1\/5 {
     letter-spacing: -1%;
     color: #617D79;
     width: 100% !important;
+}
+
+.form-group input::-webkit-input-placeholder {
+    color: #617D79CC;
+}
+
+.form-group input::-moz-placeholder {
+    color: #617D79CC;
+}
+
+.form-group input:-ms-input-placeholder {
+    color: #617D79CC;
+}
+
+.form-group input::-ms-input-placeholder {
+    color: #617D79CC;
 }
 
 .form-group input::placeholder {
@@ -558,9 +617,17 @@ img.w-1\/5 {
     color: white;
     padding: 16px;
     margin-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-column-gap: 15px;
+    -moz-column-gap: 15px;
     column-gap: 15px;
 }
 
@@ -732,6 +799,7 @@ img.w-1\/5 {
     }
 
     .pricing-plan {
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 
@@ -812,6 +880,8 @@ img.w-1\/5 {
 
     .lis-box > span {
         padding-left: 0;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 
@@ -942,8 +1012,14 @@ img.w-1\/5 {
     }
 
     .pricing-plan div {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         padding: 15px 25px;
     }
@@ -976,10 +1052,14 @@ img.w-1\/5 {
     }
 
     .about-fity .block {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
     .about-fity div:first-child {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
         order: 2;
     }
 
@@ -992,12 +1072,13 @@ img.w-1\/5 {
         width: 100%;
         border-radius: 25px;
         background: white;
+        -webkit-box-shadow: 0px 5px 10px 0px #00000014;
         box-shadow: 0px 5px 10px 0px #00000014;
         padding: 20px 24px;
     }
 
     .aplication {
-      padding-right: 0;
+        padding-right: 0;
     }
 
     .swiper-wrapper {
@@ -1025,8 +1106,12 @@ img.w-1\/5 {
     }
 
     .hero li::before {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
         transform: scale(0.8);
         display: inline-block;
+        -webkit-transform-origin: left center;
+        -ms-transform-origin: left center;
         transform-origin: left center;
         vertical-align: middle;
         padding-right: 8px;

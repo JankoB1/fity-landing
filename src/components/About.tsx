@@ -28,7 +28,7 @@ const About = () => {
                 </div>
             </div>
             <div className="block md:flex flex-wrap content-between mt-[50px] md:mt-[150px] fity-features">
-                <div style={{ order: 'unset !important' }} className="md:block orange-section w-1/1 md:w-1/2 pr-0 md:pr-[40px]">
+                <div className="order-unset md:block orange-section w-1/1 md:w-1/2 pr-0 md:pr-[40px]">
                     <img src={blue} alt="blue section"/>
                 </div>
                 <div className="w-1/1 md:w-1/2 mt-auto mb-auto pr-0 pl-0 md:pr-[100px] md:pl-[40px]">
@@ -48,7 +48,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="block md:flex flex-wrap content-between mt-[50px] md:mt-[150px] fity-features">
-                    <div style={{ order: 'unset !important' }} className="md:block w-1/1 pr-0 green-section md:w-1/2 md:pr-[40px]">
+                    <div className="order-unset md:block w-1/1 pr-0 green-section md:w-1/2 md:pr-[40px]">
                         <img src={green} alt="green section"/>
                     </div>
                     <div className="w-1/1 md:w-1/2 mt-auto mb-auto pr-0 pl-0 md:pr-[100px] md:pl-[40px]">
@@ -69,7 +69,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="block md:flex flex-wrap content-between mt-[50px] md:mt-[150px] fity-features">
-                    <div style={{ order: 'unset !important' }} className="md:block w-1/1 apricot-section md:w-1/2 pr-0 md:pr-[40px]">
+                    <div className="order-unset md:block w-1/1 apricot-section md:w-1/2 pr-0 md:pr-[40px]">
                         <img src={apricot} alt="apricot section"/>
                     </div>
                     <div className="w-1/1 md:w-1/2 mt-auto mb-auto pr-0 pl-0 md:pr-[100px] md:pl-[40px]">
