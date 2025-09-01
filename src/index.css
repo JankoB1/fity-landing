@@ -203,6 +203,11 @@ img.w-1\/5 {
     width: 15%;
 }
 
+.reservation-box.md\:mb-0.mb-12 {
+    height: fit-content !important;
+    padding-bottom: 15px !important;
+}
+
 .manifesto .bg {
     background-color: rgba(23, 52, 48, 0.7);
     position: absolute;

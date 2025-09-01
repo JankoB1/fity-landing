@@ -124,7 +124,7 @@ const Launch = () => {
         <img src={plate2} alt="plate" className="w-1/5 absolute right-0 top-0" />
         <div className="launch w-full">
             <div className="launch-central">
-                <h2 className="color-natural font-bold text-[36px] text-center mb-[40px]">Fity App biće dostupna 1. septembra!<br/> Budi deo Starter ekipe i ostvari benefite.</h2>
+                <h2 className="color-natural font-bold text-[36px] text-center mb-[40px]">Fity App biće dostupna u toku septembra!<br/> Budi deo Starter ekipe i ostvari benefite.</h2>
                 <p className="m-auto w-3/5 text-[26px] text-center color-natural"><strong>300</strong> najbržih korisnika koji se prijave do <strong>31. avgusta</strong> i aktiviraju pretplatu postaju deo <strong>Fity Starter</strong> ekipe i dobijaju ekskluzivne pogodnosti.</p>
             </div>
             <div className="launch-row md:grid block grid-cols-2 gap-24">
@@ -137,30 +137,30 @@ const Launch = () => {
                         </div>
                     </div>
                     <div className="numbers-line"><div className="line-inner" style={{ width: activeCount/300*100 + '%' }}></div></div>
-                    <div className="timer">
-                        <div className="grid grid-cols-8 gap-5">
-                            <div className="timer-number">{t.dStr[0]}</div>
-                            <div className="timer-number">{t.dStr[1]}</div>
+                    {/*<div className="timer">*/}
+                    {/*    <div className="grid grid-cols-8 gap-5">*/}
+                    {/*        <div className="timer-number">{t.dStr[0]}</div>*/}
+                    {/*        <div className="timer-number">{t.dStr[1]}</div>*/}
 
-                            <div className="timer-number timer-dots">:</div>
+                    {/*        <div className="timer-number timer-dots">:</div>*/}
 
-                            <div className="timer-number">{t.hStr[0]}</div>
-                            <div className="timer-number">{t.hStr[1]}</div>
+                    {/*        <div className="timer-number">{t.hStr[0]}</div>*/}
+                    {/*        <div className="timer-number">{t.hStr[1]}</div>*/}
 
-                            <div className="timer-number timer-dots">:</div>
+                    {/*        <div className="timer-number timer-dots">:</div>*/}
 
-                            <div className="timer-number">{t.mStr[0]}</div>
-                            <div className="timer-number">{t.mStr[1]}</div>
-                        </div>
+                    {/*        <div className="timer-number">{t.mStr[0]}</div>*/}
+                    {/*        <div className="timer-number">{t.mStr[1]}</div>*/}
+                    {/*    </div>*/}
 
-                        <div className="grid grid-cols-5">
-                            <div className="timer-text">Dana</div>
-                            <div></div>
-                            <div className="timer-text">Sati</div>
-                            <div></div>
-                            <div className="timer-text">Minuta</div>
-                        </div>
-                    </div>
+                    {/*    <div className="grid grid-cols-5">*/}
+                    {/*        <div className="timer-text">Dana</div>*/}
+                    {/*        <div></div>*/}
+                    {/*        <div className="timer-text">Sati</div>*/}
+                    {/*        <div></div>*/}
+                    {/*        <div className="timer-text">Minuta</div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
                 <div className="submit-form">
                     <div className="form-group">
