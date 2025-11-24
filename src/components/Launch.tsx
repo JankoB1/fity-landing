@@ -85,7 +85,7 @@ const Launch = () => {
             fields: {
                 name: name,
             },
-            groups: ['162891303439303900'],
+            groups: ['163897145551750345'],
             resubscribe: true,
         }, {
             headers: {
