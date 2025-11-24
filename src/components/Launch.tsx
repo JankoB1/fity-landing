@@ -124,45 +124,11 @@ const Launch = () => {
         <img src={plate2} alt="plate" className="w-1/5 absolute right-0 top-0" />
         <div className="launch w-full">
             <div className="launch-central">
-                <h2 className="color-natural font-bold text-[36px] text-center mb-[40px]">Fity App biće dostupna u toku septembra!<br/> Budi deo Starter ekipe i ostvari benefite.</h2>
-                <p className="m-auto w-3/5 text-[26px] text-center color-natural"><strong>300</strong> najbržih korisnika koji se prijave do <strong>lansiranja aplikacije</strong> i aktiviraju pretplatu postaju deo <strong>Fity Starter</strong> ekipe i dobijaju ekskluzivne pogodnosti.</p>
+                <h2 className="color-natural font-bold text-[36px] text-center mb-[40px]">Postani deo Fity ekipe</h2>
+                <p className="m-auto w-3/5 text-[26px] text-center color-natural">Prijavi se na newsletter listu i budi u toku sa novim dešavanjima, ponudama, receptima i savetima za zdravu i pametnu ishranu.</p>
             </div>
-            <div className="launch-row md:grid block grid-cols-2 gap-24 relative">
-                <div className="reservation-box md:mb-0 mb-12">
-                    <h5>Broj Fity starter prijava</h5>
-                    <div className="numbers">
-                        <div className="flex justify-between items-center">
-                            <p className="num-bold ">{activeCount} <span className="num-light"> / 300</span></p>
-                            <span className="num-resto">{300-activeCount} mesta ostalo</span>
-                        </div>
-                    </div>
-                    <div className="numbers-line"><div className="line-inner" style={{ width: activeCount/300*100 + '%' }}></div></div>
-                    {/*<div className="timer">*/}
-                    {/*    <div className="grid grid-cols-8 gap-5">*/}
-                    {/*        <div className="timer-number">{t.dStr[0]}</div>*/}
-                    {/*        <div className="timer-number">{t.dStr[1]}</div>*/}
-
-                    {/*        <div className="timer-number timer-dots">:</div>*/}
-
-                    {/*        <div className="timer-number">{t.hStr[0]}</div>*/}
-                    {/*        <div className="timer-number">{t.hStr[1]}</div>*/}
-
-                    {/*        <div className="timer-number timer-dots">:</div>*/}
-
-                    {/*        <div className="timer-number">{t.mStr[0]}</div>*/}
-                    {/*        <div className="timer-number">{t.mStr[1]}</div>*/}
-                    {/*    </div>*/}
-
-                    {/*    <div className="grid grid-cols-5">*/}
-                    {/*        <div className="timer-text">Dana</div>*/}
-                    {/*        <div></div>*/}
-                    {/*        <div className="timer-text">Sati</div>*/}
-                    {/*        <div></div>*/}
-                    {/*        <div className="timer-text">Minuta</div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-                </div>
-                <div className="submit-form">
+            <div className="launch-row md:grid block relative">
+                <div className="submit-form md:grid md:grid-cols-3 md:gap-4">
                     <div className="form-group">
                         <input placeholder="Ime i prezime" onChange={(e) => setName(e.target.value)} type="text" name="name" value={name}/>
                         <img src={nameIcon} alt=""/>
@@ -171,18 +137,8 @@ const Launch = () => {
                         <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} type="email" name="email" value={email}/>
                         <img src={emailIcon} alt=""/>
                     </div>
-                    <button onClick={createSubscriber}>Postani Fity Starter član <img src={check} style={{ filter: 'brightness(0) invert(1)' }} alt=""/></button>
-                    <p>Prijava je potpuno besplatna <img src={money} alt=""/></p>
+                    <button onClick={createSubscriber}>Prijavi se na newsletter listu <img src={check} style={{ filter: 'brightness(0) invert(1)' }} alt=""/></button>
                 </div>
-                <h2 className="l-h2">Šta dobijaš prijavom za<br/>Fity Starter ekipu?</h2>
-                <div className="lis-box">
-                    <p className="flex gap-5"><img src={check} alt=""/>50% niža cena pretplate koja važi zauvek</p>
-                    <p className="flex gap-5"><img src={check} alt=""/>Rani pristup novim funkcionalnostima</p>
-                    <p className="flex gap-5"><img src={check} alt=""/>Učešće u razvoju aplikacije i predlozima</p>
-                    <p className="flex gap-5"><img src={check} alt=""/>Fity Starter poklon paket i bedž na profilu</p>
-                    <p className="flex gap-5"><img src={check} alt=""/>Kompletan program vežbanja za početnike</p>
-                </div>
-                <div className="line"></div>
             </div>
         </div>
         <div className="launch-down pb-[50px] mb-[50px]">

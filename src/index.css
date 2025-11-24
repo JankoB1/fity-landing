@@ -429,7 +429,7 @@ img.w-1\/5 {
 }
 
 .launch-down {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 110px auto 0;
     padding-top: 110px;
     border-top: 1px solid #617D7933;
@@ -620,8 +620,9 @@ img.w-1\/5 {
     letter-spacing: -1%;
     text-align: center;
     color: white;
-    padding: 16px;
-    margin-top: 40px;
+    padding: 18px 16px;
+    margin-top: 0;
+    height: fit-content;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
