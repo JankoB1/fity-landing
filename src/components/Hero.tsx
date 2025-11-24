@@ -25,7 +25,7 @@ const Hero = () => {
                 {/*    <img src={heart} alt="heart icon" />*/}
                 {/*</a>*/}
                 <img className="block md:hidden mob-her" src={mobHero} alt="mobile hero"/>
-                <div className="mt-[60px] flex gap-5 items-center pb-20 pl-0">
+                <div className="mt-[60px] flex gap-5 items-center mb-12 pb-20 pl-0">
                     <a href="https://apps.apple.com/us/app/fity-meals/id6753711257" target="_blank"><img src={apple} alt="apple" className="w-[50]"/></a>
                     <a href="https://play.google.com/store/apps/details?id=app.getfity" target="_blank"><img src={android} alt="android" /></a>
                 </div>

@@ -15,7 +15,7 @@ const About = () => {
             <div className="pl-[10px] pr-[10px] w-1/1 md:w-3/5 items-center ml-auto mr-auto md:pl-[70px] md:pr-[70px]">
                 <h2 className="text-center text-[26px] md:text-[36px] font-bold mt-3 mb-8">Uštedi novac, vreme i energiju potrebnu za planiranje i praćenje obroka</h2>
                 <p className="text-[18px] md:text-[23px] text-center">Fity ti predlaže šta, koliko i kada da jedeš, u odnosu na tvoje ciljeve, preference i potrebe. Obroci su zdravi, ukusni i brzi. <br/><br/>Za tebe generiše šoping listu namirnica i daje ti mogućnost da pratiš napredak. I još mnogo toga, za već <strong>od 575 RSD mesečno.</strong></p>
-                <div className="mt-[50px] flex gap-5 items-center justify-center pb-20 pl-0">
+                <div className="mt-[51px] flex gap-5 items-center justify-center pb-20 pl-0">
                     <a href="https://apps.apple.com/us/app/fity-meals/id6753711257" target="_blank"><img src={apple} alt="apple" className="w-[50]"/></a>
                     <a href="https://play.google.com/store/apps/details?id=app.getfity" target="_blank"><img src={android} alt="android" /></a>
                 </div>
