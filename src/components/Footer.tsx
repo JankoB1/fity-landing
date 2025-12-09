@@ -4,13 +4,22 @@ import facebook from '../assets/icons/facebook-icon.svg';
 import tiktok from '../assets/icons/tiktok-icon.svg';
 import apple from "../assets/images/apple-btn.svg";
 import android from "../assets/images/google-btn.svg";
+import {gtag} from "../gtag";
 
 const Footer = () => {
+
+    const trackStoreClick = (store: "apple" | "android") => {
+        gtag("event", "store_button_click", {
+            store,
+            page_location: window.location.href,
+        });
+    };
+
     return (
         <footer>
             <div className="mt-[20px] pl-[5%] pr-[5%] flex gap-5 justify-center items-center pb-14 pl-0">
-                <a href="https://apps.apple.com/us/app/fity-meals/id6753711257" target="_blank"><img src={apple} alt="apple" className="w-[50]"/></a>
-                <a href="https://play.google.com/store/apps/details?id=app.getfity" target="_blank"><img src={android} alt="android" /></a>
+                <a onClick={() => trackStoreClick("apple")} href="https://apps.apple.com/us/app/fity-meals/id6753711257" target="_blank"><img src={apple} alt="apple" className="w-[50]"/></a>
+                <a onClick={() => trackStoreClick("android")} href="https://play.google.com/store/apps/details?id=app.getfity" target="_blank"><img src={android} alt="android" /></a>
             </div>
             <div className="socials flex mb-[20px] justify-center w-[100%]">
                 <a href="https://www.facebook.com/getfityapp" target="_blank" className="mr-[30px]">

@@ -6,8 +6,17 @@ import mobile from '../assets/images/hero-2.png';
 import ring from '../assets/icons/ring-icon.svg';
 import heart from '../assets/images/heart-fity.svg';
 import mobHero from '../assets/images/mob-hero.png';
+import {gtag} from "../gtag";
 
 const Hero = () => {
+
+    const trackStoreClick = (store: "apple" | "android") => {
+        gtag("event", "store_button_click", {
+            store,
+            page_location: window.location.href,
+        });
+    };
+
     return (
         <section className="hero relative pb-20">
             <div className="container w-3/5">
@@ -26,8 +35,8 @@ const Hero = () => {
                 {/*</a>*/}
                 <img className="block md:hidden mob-her" src={mobHero} alt="mobile hero"/>
                 <div className="mt-[60px] flex gap-5 items-center mb-12 pb-20 pl-0">
-                    <a href="https://apps.apple.com/us/app/fity-meals/id6753711257" target="_blank"><img src={apple} alt="apple" className="w-[50]"/></a>
-                    <a href="https://play.google.com/store/apps/details?id=app.getfity" target="_blank"><img src={android} alt="android" /></a>
+                    <a onClick={() => trackStoreClick("apple")} href="https://apps.apple.com/us/app/fity-meals/id6753711257" target="_blank"><img src={apple} alt="apple" className="w-[50]"/></a>
+                    <a onClick={() => trackStoreClick("android")} href="https://play.google.com/store/apps/details?id=app.getfity" target="_blank"><img src={android} alt="android" /></a>
                 </div>
             </div>
             <img src={cup} alt="cup" className="cup-hero absolute w-[400px] top-0 right-1/4" />
