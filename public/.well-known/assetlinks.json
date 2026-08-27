@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.getfity",
+      "sha256_cert_fingerprints": ["1E:A7:0C:69:5C:F2:62:E9:5D:3E:F5:DC:F1:88:72:47:18:0A:3B:12:D8:C0:92:01:CB:2B:12:7E:B9:FB:8C:4E"]
+    }
+  }
+]

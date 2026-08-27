@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "VNM8M8L6AH.app.fity",
+        "paths": ["/gym", "/gym/*"]
+      }
+    ]
+  }
+}
