@@ -122,9 +122,6 @@ function Promotions() {
 
                     {available ? (
                         <>
-                            <p className="uppercase tracking-widest text-[13px] font-bold color-fity-green mb-3">
-                                Poklon za članove teretane
-                            </p>
                             <h1 className="text-[34px] leading-[1.1] font-bold color-natural mb-4">
                                 {trialDays} dana Fity-ja
                                 <br />
@@ -162,10 +159,10 @@ function Promotions() {
                                 {platform === 'other' && (
                                     <div className="flex gap-4 justify-center mt-2">
                                         <a href={STORE_URLS.ios} target="_blank" rel="noopener noreferrer" onClick={() => trackStoreClick('apple')}>
-                                            <img src={apple} alt="App Store" className="w-[50px]" />
+                                            <img src={apple} alt="App Store" className="h-[44px] w-auto" />
                                         </a>
                                         <a href={STORE_URLS.android} target="_blank" rel="noopener noreferrer" onClick={() => trackStoreClick('android')}>
-                                            <img src={android} alt="Google Play" />
+                                            <img src={android} alt="Google Play" className="h-[44px] w-auto" />
                                         </a>
                                     </div>
                                 )}
@@ -174,7 +171,7 @@ function Promotions() {
                             <button
                                 type="button"
                                 onClick={handleCopyCode}
-                                className="w-full bg-[#F2F2F2] rounded-2xl py-4 px-5 mb-8 text-left"
+                                className="w-full bg-[#F2F2F2] rounded-2xl py-4 px-5 text-left"
                             >
                                 <p className="text-[13px] text-[#617D79] mb-1.5">Tvoj kupon kod</p>
                                 <div className="flex items-center justify-between gap-3">
@@ -184,21 +181,6 @@ function Promotions() {
                                     </span>
                                 </div>
                             </button>
-
-                            <ul className="text-left text-[14px] color-natural space-y-2.5">
-                                <li className="flex gap-2.5 items-start">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-[7px] bg-[#19B888] text-white grid place-items-center text-[12px] font-bold">1</span>
-                                    <span>Preuzmi aplikaciju sa dugmeta iznad</span>
-                                </li>
-                                <li className="flex gap-2.5 items-start">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-[7px] bg-[#19B888] text-white grid place-items-center text-[12px] font-bold">2</span>
-                                    <span>Pri registraciji unesi kod sa ove stranice (na Androidu će često biti već upisan)</span>
-                                </li>
-                                <li className="flex gap-2.5 items-start">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-[7px] bg-[#19B888] text-white grid place-items-center text-[12px] font-bold">3</span>
-                                    <span>{trialDays} dana kreće odmah</span>
-                                </li>
-                            </ul>
                         </>
                     ) : (
                         <>
@@ -233,10 +215,10 @@ function Promotions() {
                                 {platform === 'other' && (
                                     <div className="flex gap-4 justify-center mt-2">
                                         <a href={STORE_URLS.ios} target="_blank" rel="noopener noreferrer" onClick={() => trackStoreClick('apple')}>
-                                            <img src={apple} alt="App Store" className="w-[50px]" />
+                                            <img src={apple} alt="App Store" className="h-[44px] w-auto" />
                                         </a>
                                         <a href={STORE_URLS.android} target="_blank" rel="noopener noreferrer" onClick={() => trackStoreClick('android')}>
-                                            <img src={android} alt="Google Play" />
+                                            <img src={android} alt="Google Play" className="h-[44px] w-auto" />
                                         </a>
                                     </div>
                                 )}
@@ -292,37 +274,37 @@ function Promotions() {
                         </div>
 
                         {accountTab === 'none' ? (
-                            <ul className="text-left text-[14px] space-y-3 mb-6">
-                                <li className="flex gap-3">
+                            <div className="text-left text-[14px] space-y-3 mb-6">
+                                <div className="flex gap-3">
                                     <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>Preuzmi Fity aplikaciju sa dugmeta na ovoj stranici i pokreni registraciju.</span>
-                                </li>
-                                <li className="flex gap-3">
+                                </div>
+                                <div className="flex gap-3">
                                     <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>Iznad dugmeta „Započni probni period" nalepi kod koji si upravo kopirao/la (na Androidu će često biti već upisan).</span>
-                                </li>
-                                <li className="flex gap-3">
+                                </div>
+                                <div className="flex gap-3">
                                     <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>{trialDays} dana besplatno kreće odmah po registraciji.</span>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
                         ) : (
-                            <ul className="text-left text-[14px] space-y-3 mb-6">
-                                <li className="flex gap-3">
+                            <div className="text-left text-[14px] space-y-3 mb-6">
+                                <div className="flex gap-3">
                                     <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>Otvori Fity aplikaciju i uloguj se na svoj nalog.</span>
-                                </li>
-                                <li className="flex gap-3">
+                                </div>
+                                <div className="flex gap-3">
                                     <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>
                                         Idi na <strong>Profil → Unesi kupon kod</strong>. Ako ti je probni period već istekao, isti unos te čeka na ekranu za pretplatu, pod „Imam kupon kod".
                                     </span>
-                                </li>
-                                <li className="flex gap-3">
+                                </div>
+                                <div className="flex gap-3">
                                     <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>Nalepi kod i potvrdi sa „Primeni" — {trialDays} dana kreće odmah.</span>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
                         )}
 
                         <button
