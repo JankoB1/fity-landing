@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { API_BASE_URL } from '../config';
 
-// Backend (fity Laravel repo) vec generise QR kod na /gym/{code}/qr - ova
+// Backend (fity Laravel repo) vec generise QR kod na /promotions/{code}/qr - ova
 // stranica je samo zgodan omotac za preuzimanje u visokoj rezoluciji pre
 // stampe. Nije deo korisnickog toka, namenjena je samo za internu upotrebu
 // pri pripremi flajera/postera.
@@ -15,8 +15,8 @@ function GymQr() {
     const [size, setSize] = useState(1200);
 
     const [downloading, setDownloading] = useState(false);
-    const targetUrl = `${window.location.origin}/gym/${code}`;
-    const qrUrl = `${apiOrigin}/gym/${code}/qr?format=${format}&size=${size}`;
+    const targetUrl = `${window.location.origin}/promotions/${code}`;
+    const qrUrl = `${apiOrigin}/promotions/${code}/qr?format=${format}&size=${size}`;
 
     // <a download> ne radi pouzdano za cross-origin resurse (slika je na
     // api.getfity.app, stranica na getfity.app) - browseri ga u tom slucaju

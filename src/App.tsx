@@ -8,7 +8,7 @@ import CookiesTerms from "./pages/CookiesTerms";
 import Thanks from "./pages/Thanks";
 import AboutUs from "./pages/AboutUs";
 import Support from "./pages/Support";
-import Gym from "./pages/Gym";
+import Promotions from "./pages/Promotions";
 import GymQr from "./pages/GymQr";
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
       <Route path="/hvala-na-prijavi" element={<Thanks />} />
       <Route path="/o-nama" element={<AboutUs />} />
       <Route path="/podrska" element={<Support />} />
-      <Route path="/gym" element={<Gym />} />
-      <Route path="/gym/:code" element={<Gym />} />
+      <Route path="/promotions" element={<Promotions />} />
+      <Route path="/promotions/:code" element={<Promotions />} />
       <Route path="/qr/:code" element={<GymQr />} />
   </Routes>
   );

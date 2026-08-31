@@ -1,3 +1,3 @@
 # Netlify: real static files (uklj. /.well-known/*) se uvek serviraju prve,
-# ovo je fallback za React Router rute kao /gym/:code kad se otvore direktno.
+# ovo je fallback za React Router rute kao /promotions/:code kad se otvore direktno.
 /*    /index.html   200

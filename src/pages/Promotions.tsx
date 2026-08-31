@@ -3,12 +3,14 @@ import { useParams } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import apple from '../assets/images/apple-btn.svg';
 import android from '../assets/images/google-btn.svg';
+import checkIcon from '../assets/icons/check-icon.svg';
 import Footer from '../components/Footer';
 import { gtag } from '../gtag';
 import { STORE_URLS, IOS_APP_ID } from '../config';
 import { usePromoCode } from '../hooks/usePromoCode';
 
 type Platform = 'ios' | 'android' | 'other';
+type AccountTab = 'none' | 'has';
 
 function detectPlatform(): Platform {
     const ua = navigator.userAgent || '';
@@ -33,9 +35,7 @@ function reasonMessage(reason: string | null): string {
     }
 }
 
-type AccountTab = 'none' | 'has';
-
-function Gym() {
+function Promotions() {
     const { code: rawCode } = useParams<{ code: string }>();
     const code = (rawCode || 'GYM30').toUpperCase();
     const state = usePromoCode(code);
@@ -55,7 +55,7 @@ function Gym() {
         } catch {
             setCopied(false);
         }
-        gtag('event', 'gym_copy_code_click', {
+        gtag('event', 'promotions_copy_code_click', {
             promo_code: code,
             page_location: window.location.href,
         });
@@ -71,7 +71,7 @@ function Gym() {
     // dodatne akcije korisnika.
     const androidUrl = useMemo(() => {
         const referrer = new URLSearchParams({
-            utm_source: 'gym',
+            utm_source: 'promotions',
             utm_medium: 'qr',
             utm_campaign: code.toLowerCase(),
             promo: code,
@@ -101,7 +101,7 @@ function Gym() {
     }, [trialDays]);
 
     const trackStoreClick = (store: 'apple' | 'android') => {
-        gtag('event', 'gym_store_button_click', {
+        gtag('event', 'promotions_store_button_click', {
             store,
             promo_code: code,
             page_location: window.location.href,
@@ -116,27 +116,21 @@ function Gym() {
 
     return (
         <>
-            <div
-                className="min-h-screen flex items-center justify-center px-6 py-14"
-                style={{
-                    background:
-                        'linear-gradient(160deg, rgba(157,208,48,0.85) 0%, #19B888 100%)',
-                }}
-            >
-                <div className="w-full max-w-[420px] text-center text-white">
+            <div className="min-h-screen bg-white flex items-center justify-center px-6 py-14">
+                <div className="w-full max-w-[420px] text-center">
                     <img src={logo} className="mx-auto w-[52px] mb-8" alt="Fity" />
 
                     {available ? (
                         <>
-                            <p className="uppercase tracking-widest text-[13px] font-bold opacity-90 mb-3">
+                            <p className="uppercase tracking-widest text-[13px] font-bold color-fity-green mb-3">
                                 Poklon za članove teretane
                             </p>
-                            <h1 className="text-[34px] leading-[1.1] font-bold mb-4">
+                            <h1 className="text-[34px] leading-[1.1] font-bold color-natural mb-4">
                                 {trialDays} dana Fity-ja
                                 <br />
                                 besplatno
                             </h1>
-                            <p className="text-[16px] opacity-95 mb-8">
+                            <p className="text-[16px] text-[#617D79] mb-8">
                                 Personalizovan plan ishrane, recepti i lista za kupovinu.
                                 Bez plaćanja i bez obaveze — otkaži kad god želiš.
                             </p>
@@ -148,7 +142,7 @@ function Gym() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={() => trackStoreClick('android')}
-                                        className="bg-white text-[#12805E] font-bold rounded-2xl py-4 px-6 text-[17px]"
+                                        className="bg-[#19B888] hover:bg-[#173430] transition-colors text-white font-bold rounded-2xl py-4 px-6 text-[17px]"
                                     >
                                         Preuzmi za Android
                                     </a>
@@ -159,7 +153,8 @@ function Gym() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={() => trackStoreClick('apple')}
-                                        className="rounded-2xl py-4 px-6 text-[17px] font-bold border-2 border-white/70"
+                                        className="rounded-2xl py-4 px-6 text-[17px] font-bold border-2 color-natural"
+                                        style={{ borderColor: '#173430' }}
                                     >
                                         Preuzmi za iPhone
                                     </a>
@@ -179,38 +174,38 @@ function Gym() {
                             <button
                                 type="button"
                                 onClick={handleCopyCode}
-                                className="w-full bg-black/15 rounded-2xl py-4 px-5 mb-8 text-left"
+                                className="w-full bg-[#F2F2F2] rounded-2xl py-4 px-5 mb-8 text-left"
                             >
-                                <p className="text-[13px] opacity-85 mb-1.5">Tvoj kupon kod</p>
+                                <p className="text-[13px] text-[#617D79] mb-1.5">Tvoj kupon kod</p>
                                 <div className="flex items-center justify-between gap-3">
-                                    <p className="text-[26px] font-bold tracking-[0.16em]">{code}</p>
-                                    <span className="flex-none text-[13px] font-bold bg-white/20 rounded-full py-2 px-4">
+                                    <p className="text-[26px] font-bold tracking-[0.16em] color-natural">{code}</p>
+                                    <span className="flex-none text-[13px] font-bold text-white bg-[#19B888] rounded-full py-2 px-4">
                                         {copied ? 'Kopirano ✓' : 'Kopiraj'}
                                     </span>
                                 </div>
                             </button>
 
-                            <ul className="text-left text-[14px] opacity-90 space-y-2.5">
-                                <li className="flex gap-2.5">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-full bg-white/20 grid place-items-center text-[12px] font-bold">1</span>
-                                    Preuzmi aplikaciju sa dugmeta iznad
+                            <ul className="text-left text-[14px] color-natural space-y-2.5">
+                                <li className="flex gap-2.5 items-start">
+                                    <span className="flex-none w-[22px] h-[22px] rounded-[7px] bg-[#19B888] text-white grid place-items-center text-[12px] font-bold">1</span>
+                                    <span>Preuzmi aplikaciju sa dugmeta iznad</span>
                                 </li>
-                                <li className="flex gap-2.5">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-full bg-white/20 grid place-items-center text-[12px] font-bold">2</span>
-                                    Pri registraciji unesi kod sa ove stranice (na Androidu će često biti već upisan)
+                                <li className="flex gap-2.5 items-start">
+                                    <span className="flex-none w-[22px] h-[22px] rounded-[7px] bg-[#19B888] text-white grid place-items-center text-[12px] font-bold">2</span>
+                                    <span>Pri registraciji unesi kod sa ove stranice (na Androidu će često biti već upisan)</span>
                                 </li>
-                                <li className="flex gap-2.5">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-full bg-white/20 grid place-items-center text-[12px] font-bold">3</span>
-                                    {trialDays} dana kreće odmah
+                                <li className="flex gap-2.5 items-start">
+                                    <span className="flex-none w-[22px] h-[22px] rounded-[7px] bg-[#19B888] text-white grid place-items-center text-[12px] font-bold">3</span>
+                                    <span>{trialDays} dana kreće odmah</span>
                                 </li>
                             </ul>
                         </>
                     ) : (
                         <>
-                            <h1 className="text-[28px] leading-[1.15] font-bold mb-4 mt-6">
+                            <h1 className="text-[28px] leading-[1.15] font-bold color-natural mb-4 mt-6">
                                 Ponuda trenutno nije aktivna
                             </h1>
-                            <p className="text-[16px] opacity-95 mb-8">{reasonMessage(reason)}</p>
+                            <p className="text-[16px] text-[#617D79] mb-8">{reasonMessage(reason)}</p>
                             <div className="flex flex-col gap-3">
                                 {showAndroid && (
                                     <a
@@ -218,7 +213,7 @@ function Gym() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={() => trackStoreClick('android')}
-                                        className="bg-white text-[#12805E] font-bold rounded-2xl py-4 px-6 text-[17px]"
+                                        className="bg-[#19B888] hover:bg-[#173430] transition-colors text-white font-bold rounded-2xl py-4 px-6 text-[17px]"
                                     >
                                         Preuzmi za Android
                                     </a>
@@ -229,7 +224,8 @@ function Gym() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={() => trackStoreClick('apple')}
-                                        className="rounded-2xl py-4 px-6 text-[17px] font-bold border-2 border-white/70"
+                                        className="rounded-2xl py-4 px-6 text-[17px] font-bold border-2 color-natural"
+                                        style={{ borderColor: '#173430' }}
                                     >
                                         Preuzmi za iPhone
                                     </a>
@@ -252,22 +248,22 @@ function Gym() {
 
             {showCopyInstructions && (
                 <div
-                    className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 px-4 py-6"
+                    className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-[#173430]/50 px-4 py-6"
                     onClick={() => setShowCopyInstructions(false)}
                 >
                     <div
-                        className="w-full max-w-[420px] bg-white rounded-3xl p-6 text-[#0F4A3B]"
+                        className="w-full max-w-[420px] bg-white rounded-3xl p-6 color-natural shadow-xl"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className="flex items-center justify-between mb-1">
-                            <p className="text-[13px] font-bold uppercase tracking-widest opacity-60">
+                            <p className="text-[13px] font-bold uppercase tracking-widest text-[#617D79]">
                                 {copied ? 'Kod je kopiran' : 'Tvoj kod'}
                             </p>
                             <button
                                 type="button"
                                 onClick={() => setShowCopyInstructions(false)}
                                 aria-label="Zatvori"
-                                className="text-[20px] leading-none opacity-50 px-2"
+                                className="text-[20px] leading-none text-[#617D79] px-2"
                             >
                                 ✕
                             </button>
@@ -279,7 +275,7 @@ function Gym() {
                                 type="button"
                                 onClick={() => setAccountTab('none')}
                                 className={`flex-1 rounded-full py-2.5 text-[13px] font-bold transition-colors ${
-                                    accountTab === 'none' ? 'bg-[#19B888] text-white' : 'text-[#0F4A3B]/70'
+                                    accountTab === 'none' ? 'bg-[#19B888] text-white' : 'text-[#617D79]'
                                 }`}
                             >
                                 Nemam nalog
@@ -288,7 +284,7 @@ function Gym() {
                                 type="button"
                                 onClick={() => setAccountTab('has')}
                                 className={`flex-1 rounded-full py-2.5 text-[13px] font-bold transition-colors ${
-                                    accountTab === 'has' ? 'bg-[#19B888] text-white' : 'text-[#0F4A3B]/70'
+                                    accountTab === 'has' ? 'bg-[#19B888] text-white' : 'text-[#617D79]'
                                 }`}
                             >
                                 Već imam nalog
@@ -298,32 +294,32 @@ function Gym() {
                         {accountTab === 'none' ? (
                             <ul className="text-left text-[14px] space-y-3 mb-6">
                                 <li className="flex gap-3">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-full bg-[#19B888]/15 text-[#19B888] grid place-items-center text-[12px] font-bold">1</span>
+                                    <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>Preuzmi Fity aplikaciju sa dugmeta na ovoj stranici i pokreni registraciju.</span>
                                 </li>
                                 <li className="flex gap-3">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-full bg-[#19B888]/15 text-[#19B888] grid place-items-center text-[12px] font-bold">2</span>
+                                    <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>Iznad dugmeta „Započni probni period" nalepi kod koji si upravo kopirao/la (na Androidu će često biti već upisan).</span>
                                 </li>
                                 <li className="flex gap-3">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-full bg-[#19B888]/15 text-[#19B888] grid place-items-center text-[12px] font-bold">3</span>
+                                    <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>{trialDays} dana besplatno kreće odmah po registraciji.</span>
                                 </li>
                             </ul>
                         ) : (
                             <ul className="text-left text-[14px] space-y-3 mb-6">
                                 <li className="flex gap-3">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-full bg-[#19B888]/15 text-[#19B888] grid place-items-center text-[12px] font-bold">1</span>
+                                    <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>Otvori Fity aplikaciju i uloguj se na svoj nalog.</span>
                                 </li>
                                 <li className="flex gap-3">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-full bg-[#19B888]/15 text-[#19B888] grid place-items-center text-[12px] font-bold">2</span>
+                                    <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>
                                         Idi na <strong>Profil → Unesi kupon kod</strong>. Ako ti je probni period već istekao, isti unos te čeka na ekranu za pretplatu, pod „Imam kupon kod".
                                     </span>
                                 </li>
                                 <li className="flex gap-3">
-                                    <span className="flex-none w-[22px] h-[22px] rounded-full bg-[#19B888]/15 text-[#19B888] grid place-items-center text-[12px] font-bold">3</span>
+                                    <img src={checkIcon} alt="" className="flex-none w-[18px] h-[18px] mt-0.5" />
                                     <span>Nalepi kod i potvrdi sa „Primeni" — {trialDays} dana kreće odmah.</span>
                                 </li>
                             </ul>
@@ -345,4 +341,4 @@ function Gym() {
     );
 }
 
-export default Gym;
+export default Promotions;
